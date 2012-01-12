@@ -1,6 +1,6 @@
 # Skellington
 
-My Sinatra Skeleton
+A Sinatra Skeleton.
 
 - DataMapper
 - RSpec
