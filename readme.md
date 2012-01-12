@@ -6,8 +6,6 @@ A Sinatra Skeleton.
 - RSpec
 
 ```
-
 bundle install
 rackup
-
 ```
