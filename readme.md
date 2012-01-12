@@ -1,6 +1,6 @@
 # Skellington
 
-A Sinatra Skeleton.
+World's Greatest Sinatra Skeleton
 
 - DataMapper
 - RSpec
