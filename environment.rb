@@ -14,7 +14,7 @@ end
 secret = 
   begin
     File.read('config/secret.txt')
-  rescue
+  rescue Errno::ENOENT
     random_secret = rand(10**128).to_s(36)
     puts <<-EOS
       Creating a random secret key for sessions
@@ -29,7 +29,8 @@ secret =
     
       #{random_secret}
     EOS
-    File.new('config/secret.txt', 'w') { |o| o.write random_secret }
+    `mkdir -p config`
+    File.open('config/secret.txt', 'w') { |o| o.write random_secret }
     random_secret
   end
 
