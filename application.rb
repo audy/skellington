@@ -3,7 +3,9 @@ require './environment.rb'
 helpers do
   
   def authenticate!
+    redirect '/' unless @user
   end
+  
 end
 
 before do
