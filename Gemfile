@@ -10,3 +10,5 @@ gem "dm-sqlite-adapter"
 gem "webrat"
 gem "rspec", "1.3.2"
 gem "rack-test"
+
+gem "bcrypt"
