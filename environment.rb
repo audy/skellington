@@ -1,37 +1,24 @@
-require 'sinatra' unless defined?(Sinatra)
+require 'sinatra'
 require 'dm-core'
+require 'dm-migrations'
+require 'dm-validations'
+require 'dm-timestamps'
+
 require './models.rb'
 
-$ENVIRONMENT == ENV['SINATRA_ENV'] || :development
+set :environment, :development
+set :root, File.expand_path(File.dirname(__FILE__))
 
-case $ENVIRONMENT
-  when :development
-    DataMapper.setup(:default, ENV['DATABASE_URL'] || 'sqlite3://db/development.db')
+case settings.environment
   when :production
-    DataMapper.setup(:default, ENV['DATABASE_URL'] || fail )
+    set :db_url, ENV['DATABASE_URL']
+  when :development
+    set :db_url, "sqlite3://#{settings.root}/db/development.db"
+    require 'sinatra/reloader'
 end
 
-secret = 
-  begin
-    File.read('config/secret.txt')
-  rescue Errno::ENOENT
-    random_secret = rand(10**128).to_s(36)
-    puts <<-EOS
-      Creating a random secret key for sessions
-    
-      For your Sinatra app to safely use sessions, a secret key
-      must be used to prevent users from tampering with their
-      cookie data (which could lead to unauthorized access to your
-      application if you store login information in the session)
-    
-      The file config/secret.txt has been created with the following
-      secret:
-    
-      #{random_secret}
-    EOS
-    `mkdir -p config`
-    File.open('config/secret.txt', 'w') { |o| o.write random_secret }
-    random_secret
-  end
+# Setup Database
+DataMapper.finalize
+DataMapper.setup(:default, settings.db_url)
 
-use Rack::Session::Cookie, :secret => secret
+enable :sessions
