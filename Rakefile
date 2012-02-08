@@ -8,7 +8,7 @@ end
 
 desc "run specs"
 task :spec do
-  sh 'rspec -c'
+  sh 'rspec'
 end
 
 namespace :db do
