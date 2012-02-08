@@ -24,4 +24,12 @@ describe 'User Model' do
   it 'has an encrypted password' do
     User.get(user.id).password.should be_nil
   end
+  
+  it 'can be authenticated' do
+    User.authenticate(user.email, user.password).should_not be_nil
+  end
+  
+  it 'cannot be authenticated with bad credentials' do
+    User.authenticate(user.email, user.password).should_not be_nil
+  end
 end
