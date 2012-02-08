@@ -21,6 +21,7 @@ class Skellington < Sinatra::Base
                      :database => File.join(DB_PATH, 'development.db'))
     DataMapper.auto_upgrade!
     require 'sinatra/reloader'
+    register Sinatra::Reloader
   end
 
   configure :test do
