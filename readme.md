@@ -2,17 +2,23 @@
 
 World's Greatest Sinatra Skeleton
 
-Inspired by Padrino, Monk, among others.
+Inspired by Padrino, Monk, Lolwut, Klee, and others.
 
 - DataMapper
 - RSpec
 - Webrat
+- Twitter Bootstrap
+- HAML
+- AssetPack
+- Bundler
+
+Comes with a simple User model, lovingly ripped from Padrino.
+
+## Setup
+
+Using Ruby 1.9.3p0 installed with RVM:
 
 ```
 bundle install
 rackup
 ```
-
-## Features
-
-- User model with authenticate! method
