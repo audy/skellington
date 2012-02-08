@@ -5,5 +5,9 @@
     %title name of the site
     = css :style
 
-%div.content
-  = yield
+%body
+
+  = haml :_topbar
+
+  %div.container
+    = yield

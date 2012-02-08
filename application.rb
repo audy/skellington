@@ -1,6 +1,5 @@
 require './environment.rb'
 require 'sinatra'
-require 'less'
 
 class Skellington < Sinatra::Base
 
