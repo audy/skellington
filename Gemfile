@@ -1,14 +1,15 @@
-source :rubygems
+source 'http://rubygems.org'
+source 'http://gems.github.com'
 
-gem "sinatra", "1.3.2"
+gem "sinatra"
 gem "sinatra-reloader"
-
-gem "data_mapper"
-gem "dm-core", "1.2.0"
+gem "haml"
+gem "sqlite3"
 gem "dm-sqlite-adapter"
+gem "data_mapper"
 
-gem "webrat"
-gem "rspec", "1.3.2"
-gem "rack-test"
-
-gem "bcrypt"
+group :test do
+  gem "rspec"
+  gem "webrat"
+  gem "rack-test", :require => "rack/test"
+end
