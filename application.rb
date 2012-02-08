@@ -31,7 +31,7 @@ class Skellington < Sinatra::Base
   end
 
   get '/' do
-    erb :home
+    haml :home
   end
 
 end
