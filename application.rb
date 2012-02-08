@@ -1,9 +1,22 @@
 require './environment.rb'
+require 'sinatra'
+require 'less'
 
-
-class App < Sinatra::Base
+class Skellington < Sinatra::Base
 
   enable :sessions
+  
+  register Sinatra::AssetPack
+  
+  assets do
+    # serve '/js',     from: 'assets/js'
+    serve '/css',    from: 'assets/css'
+    # serve '/images': from: 'assets/images'
+    
+    css :style, ['/css/*.css']
+    
+    prebuild true
+  end
 
   helpers do
 

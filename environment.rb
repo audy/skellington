@@ -1,15 +1,17 @@
 require 'sinatra'
-require 'data_mapper'
 require 'bcrypt'
+require 'bundler'
+
+Bundler.require(:default)
 
 require './models.rb'
 
-class App < Sinatra::Base
+class Skellington < Sinatra::Base
 
   DataMapper.finalize
 
   set :environment, :development
-  set :root, File.expand_path(File.dirname(__FILE__))
+  set :root, File.dirname(__FILE__)
 
   DB_PATH = File.join(File.dirname(__FILE__), 'db')
 

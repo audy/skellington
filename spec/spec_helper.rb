@@ -16,7 +16,7 @@ end
 RSpec.configure do |config|
   
   def app
-    App
+    Skellington
   end
   
   config.before(:each) { DataMapper.auto_migrate! }
