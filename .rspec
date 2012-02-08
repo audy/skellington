@@ -1,1 +1,1 @@
-rspec -c
+rspec -c -f d
