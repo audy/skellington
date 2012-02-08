@@ -3,9 +3,10 @@
 %html
   %head
     %title name of the site
-    = css :style
+    = css :main
+    = js :main
 
-%body
+%body{ :'data-spy' => 'scroll', :'data-target' => '.subnav', :'data-offset' => 60 }
 
   = haml :_topbar
 

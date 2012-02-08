@@ -8,11 +8,12 @@ class Skellington < Sinatra::Base
   register Sinatra::AssetPack
   
   assets do
-    # serve '/js',     from: 'assets/js'
+    serve '/js',     from: 'assets/js'
     serve '/css',    from: 'assets/css'
     # serve '/images': from: 'assets/images'
     
-    css :style, ['/css/*.css']
+    css :main, ['/css/*.css']
+    js :main, ['/js/*.js']
     
     prebuild true
   end
