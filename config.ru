@@ -1,2 +1,2 @@
 require './application'
-run Sinatra::Application
+Skellington.run!

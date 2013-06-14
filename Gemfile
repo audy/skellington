@@ -1,8 +1,18 @@
-source :rubygems
+source 'http://rubygems.org'
+source 'http://gems.github.com'
 
-gem "sinatra", "1.3.2"
-gem "dm-core", "1.2.0"
+gem "sinatra"
+gem "sinatra-reloader"
+gem "haml"
+gem "sqlite3"
 gem "dm-sqlite-adapter"
-gem "rspec", "1.3.2"
-gem "rack-test"
 gem "encrypted_cookie"
+gem "data_mapper"
+
+gem 'sinatra-assetpack', :require => 'sinatra/assetpack', :git => 'git://github.com/rstacruz/sinatra-assetpack.git'
+
+group :test do
+  gem "rspec"
+  gem "webrat"
+  gem "rack-test", :require => "rack/test"
+end
