@@ -15,7 +15,7 @@ Comes with a simple User model, lovingly ripped from Padrino.
 
 ## Setup
 
-Using Ruby 1.9.3p0 installed with RVM:
+Tested on Ruby 2.0.0-p247
 
 ```
 bundle install
