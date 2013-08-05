@@ -19,7 +19,7 @@ Tested on Ruby 2.0.0-p247
 
 ```
 bundle install
-rackup
+bundle exec rackup
 ```
 
 ## Merit Badges
