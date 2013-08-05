@@ -7,6 +7,7 @@ Inspired by Padrino, Monk, Lolwut, Klee, and others.
 - RSpec
 - Webrat
 - Twitter Bootstrap
+- jQuery
 - HAML
 - AssetPack
 - Bundler
