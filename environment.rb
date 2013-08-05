@@ -10,7 +10,6 @@ class Skellington < Sinatra::Base
 
   DataMapper.finalize
 
-  set :environment, :development
   set :root, File.dirname(__FILE__)
 
   DB_PATH = File.join(File.dirname(__FILE__), 'db')
