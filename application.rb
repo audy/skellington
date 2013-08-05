@@ -13,7 +13,7 @@ class Skellington < Sinatra::Base
     serve '/images', from: 'assets/images'
 
     css :main, ['/css/*.css']
-    js :main, ['/js/*.js']
+    js :main, ['/js/jquery.*.js', '/js/bootstrap.*.js']
 
     css_compression :simple
     js_compression :uglify
