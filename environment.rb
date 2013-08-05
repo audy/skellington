@@ -23,7 +23,7 @@ class Skellington < Sinatra::Base
     register Sinatra::Reloader
   end
 
-  config :deployment do
+  configure :deployment do
     DataMapper.setup(:default,
                      :adapter => 'postgresql',
                      :database => ENV['DATABASE_URL'])
