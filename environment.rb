@@ -26,7 +26,7 @@ class Skellington < Sinatra::Base
   configure :deployment do
     DataMapper.setup(:default,
                      :adapter => 'postgresql',
-                     :database => ENV['DATABASE_URL'])
+                     :database => ENV['HEROKU_POSTGRESQL_ORANGE_URL'])
   end
 
   configure :test do
