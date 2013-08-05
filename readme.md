@@ -1,6 +1,7 @@
 # Skellington
 
-World's Greatest Sinatra Skeleton.
+World's Greatest Sinatra Skeleton. On the food spectrum of web app
+development frameworks, it's basically a bologna sandwich.
 
 DataMapper (ORM), RSpec & Webrat (Testing), Bootstrap + HAML + AssetPack
 (Composing), and Bundler (Bundling).
