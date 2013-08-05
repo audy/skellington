@@ -2,7 +2,6 @@ source 'http://rubygems.org'
 
 gem 'sinatra'
 gem 'haml'
-gem 'sqlite3'
 gem 'encrypted_cookie'
 gem 'data_mapper'
 
@@ -15,6 +14,7 @@ group :test do
 end
 
 group :development do
+  gem 'sqlite3'
   gem 'dm-sqlite-adapter'
   gem 'sinatra-reloader'
 end
