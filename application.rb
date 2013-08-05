@@ -14,8 +14,6 @@ class Skellington < Sinatra::Base
 
     css :main, ['/css/*.css']
     js :main, ['/js/*.js']
-
-    prebuild true
   end
 
   helpers do
