@@ -1,9 +1,9 @@
 class User
   include DataMapper::Resource
   include BCrypt
-  
+
   attr_accessor :password
-  
+
   property :created_at, DateTime
 
   property :id,    Serial
