@@ -5,6 +5,8 @@ World's Greatest Sinatra Skeleton.
 DataMapper (ORM), RSpec & Webrat (Testing), Bootstrap + HAML + AssetPack
 (Composing), and Bundler (Bundling).
 
+[Demo app](http://skellington.herokuapp.com) on Heroku.
+
 ## Setup
 
 Tested on Ruby 2.0.0-p247
