@@ -1,18 +1,9 @@
 # Skellington
 
-World's Greatest Sinatra Skeleton
-Inspired by Padrino, Monk, Lolwut, Klee, and others.
+World's Greatest Sinatra Skeleton.
 
-- DataMapper
-- RSpec
-- Webrat
-- Twitter Bootstrap
-- jQuery
-- HAML
-- AssetPack
-- Bundler
-
-Comes with a simple User model, lovingly ripped from Padrino.
+DataMapper (ORM), RSpec & Webrat (Testing), Bootstrap + HAML + AssetPack
+(Composing), and Bundler (Bundling).
 
 ## Setup
 
