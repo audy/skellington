@@ -10,7 +10,7 @@ class Skellington < Sinatra::Base
   assets do
     serve '/js',     from: 'assets/js'
     serve '/css',    from: 'assets/css'
-    # serve '/images': from: 'assets/images'
+    serve '/images', from: 'assets/images'
 
     css :main, ['/css/*.css']
     js :main, ['/js/*.js']
