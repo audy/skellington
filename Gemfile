@@ -21,6 +21,6 @@ group :development do
   gem 'sinatra-reloader'
 end
 
-group :deployment do
+group :production do
   gem 'dm-postgres-adapter'
 end
