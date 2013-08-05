@@ -14,6 +14,9 @@ class Skellington < Sinatra::Base
 
     css :main, ['/css/*.css']
     js :main, ['/js/*.js']
+
+    css_compression :simple
+    js_compression :uglify
   end
 
   helpers do
