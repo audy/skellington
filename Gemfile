@@ -8,6 +8,7 @@ gem 'encrypted_cookie'
 gem 'data_mapper'
 
 gem 'sinatra-assetpack', :require => 'sinatra/assetpack', :git => 'git://github.com/rstacruz/sinatra-assetpack.git'
+gem 'uglifier'
 
 group :test do
   gem 'rspec'
