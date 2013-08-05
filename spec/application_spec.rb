@@ -1,6 +1,6 @@
 require File.join(File.dirname(__FILE__), 'spec_helper')
 
-describe 'The Applicaiton App' do
+describe Skellington do
 
   it 'should load the index page successfully' do
     get '/'
