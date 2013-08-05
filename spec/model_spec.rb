@@ -4,9 +4,9 @@ describe User do
 
   let(:user) {
     User.create(
-      name:     'Testy McTesterson',
-      email:    'tester@testes.com',
-      password: 'tebow'
+      name:     'Bones McSkelleton',
+      email:    'bones@skellingtons.com',
+      password: 'yogs'
   )}
 
   it 'can be created' do
