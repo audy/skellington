@@ -24,7 +24,7 @@ class Skellington < Sinatra::Base
   end
 
   configure :production do
-    DataMapper.setup(:default, ENV['DATABASE_URK'])
+    DataMapper.setup(:default, ENV['DATABASE_URL'])
   end
 
   configure :test do
