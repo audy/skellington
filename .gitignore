@@ -1,3 +1,4 @@
 config/*
 db/*
 .DS_Store
+Gemfile.lock
