@@ -1,5 +1,6 @@
 # Skellington
 
+
 [![Build
 Status](https://travis-ci.org/audy/skellington.png?branch=master)](https://travis-ci.org/audy/skellington)
 
@@ -8,7 +9,7 @@ frameworks, it's a tempeh burrito
 
 - Thin
 - PostgreSQL + DataMapper
-- RSpec + Webrat
+- RSpec
 - Bootstrap + HAML + AssetPack
 
 [Demo app](http://skellington.herokuapp.com) on Heroku.

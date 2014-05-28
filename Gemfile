@@ -14,7 +14,6 @@ gem 'uglifier'
 
 group :test do
   gem 'rspec'
-  gem 'webrat'
   gem 'rack-test', :require => 'rack/test'
 end
 
