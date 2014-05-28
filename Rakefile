@@ -23,3 +23,8 @@ namespace :db do
     DataMapper.auto_migrate!
   end
 end
+  desc 'auto-upgrade the database schema (data safe)'
+  task :upgrade do
+    DataMapper.auto_upgrade!
+  end
+end
