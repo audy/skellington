@@ -7,6 +7,7 @@ gem 'haml'
 gem 'encrypted_cookie'
 gem 'dm-postgres-adapter'
 gem 'data_mapper'
+gem 'thin'
 
 gem 'sinatra-assetpack', :require => 'sinatra/assetpack', :git => 'git://github.com/rstacruz/sinatra-assetpack.git'
 gem 'uglifier'

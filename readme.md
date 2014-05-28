@@ -6,6 +6,7 @@ Status](https://travis-ci.org/audy/skellington.png?branch=master)](https://travi
 World's Greatest Sinatra Skeleton. On the food spectrum of web app development
 frameworks, it's a tempeh burrito
 
+- Thin
 - PostgreSQL + DataMapper
 - RSpec + Webrat
 - Bootstrap + HAML + AssetPack
