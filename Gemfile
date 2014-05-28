@@ -5,6 +5,7 @@ ruby '2.1.2'
 gem 'sinatra'
 gem 'haml'
 gem 'encrypted_cookie'
+gem 'dm-postgres-adapter'
 gem 'data_mapper'
 
 gem 'sinatra-assetpack', :require => 'sinatra/assetpack', :git => 'git://github.com/rstacruz/sinatra-assetpack.git'
@@ -17,11 +18,5 @@ group :test do
 end
 
 group :development do
-  gem 'sqlite3'
-  gem 'dm-sqlite-adapter'
   gem 'sinatra-reloader'
-end
-
-group :production do
-  gem 'dm-postgres-adapter'
 end

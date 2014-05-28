@@ -1,4 +1,11 @@
 language: ruby
 rvm:
   - 2.1.2
+addons:
+  postgresql: "9.3"
+env:
+  - "DATABASE_URL=postgres://postgres@127.0.0.1/skellington_test"
+before_script:
+  - psql -c 'create database skellington_test;' -U postgres
+  - bundle exec rake -T db:automigrate
 script: bundle exec rspec
