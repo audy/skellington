@@ -12,7 +12,7 @@ task :spec do
 end
 
 namespace :db do
-  desc 'seed the database with informatione'
+  desc 'seed the database with information'
   task :seed do
   end
   
