@@ -18,5 +18,6 @@ group :test do
 end
 
 group :development do
+  gem 'rake'
   gem 'sinatra-reloader'
 end
