@@ -14,11 +14,17 @@ frameworks, it's a tempeh burrito
 
 [Demo app](http://skellington.herokuapp.com) on Heroku.
 
-## Setup
+## Quickstart
 
 Using Ruby 2.1.2 and PostgreSQL 9.3
 
 ```
+dbcreate skellington
+
 bundle install
-DATABASE_URL=postgres://$USER@127.0.0.1/postgres bundle exec rackup
+
+DATABASE_URL=postgres://$USER@127.0.0.1/skellington
+
+bundle exec rake db:migrate
+bundle exec rackup
 ```
