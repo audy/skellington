@@ -28,7 +28,7 @@ class Skellington < Sinatra::Base
     # need to be able to access @db_url which is not initialized yet in
     # spec_helper :\
     Sequel.extension :migration
-    Sequel::Migrator.run(@db, 'db/migrate')
+    Sequel::Migrator.run(@db, File.join(File.expand_path(File.dirname(__FILE__)), 'db', 'migrate'))
   end
 
   # must be loaded after Sequel.connect
