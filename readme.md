@@ -8,7 +8,7 @@ World's Greatest Sinatra Skeleton. On the food spectrum of web app development
 frameworks, it's a tempeh burrito
 
 - Thin
-- PostgreSQL + DataMapper
+- PostgreSQL + Sequel
 - RSpec
 - Bootstrap + HAML + AssetPack
 
