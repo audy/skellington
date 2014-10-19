@@ -6,6 +6,7 @@ gem 'sinatra'
 gem 'haml'
 gem 'encrypted_cookie'
 
+gem 'bcrypt'
 gem 'sequel'
 gem 'pg'
 

@@ -12,6 +12,7 @@ GEM
   remote: http://rubygems.org/
   specs:
     backports (3.6.0)
+    bcrypt (3.1.7)
     daemons (1.1.9)
     diff-lcs (1.2.5)
     encrypted_cookie (0.0.4)
@@ -64,6 +65,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt
   encrypted_cookie
   haml
   pg
