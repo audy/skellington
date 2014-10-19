@@ -9,13 +9,15 @@ Sinatra::Base.set :raise_errors, true
 
 require File.join(File.dirname(__FILE__), '..', 'application')
 
+Sequel.extension :migration
+
 RSpec.configure do |config|
 
   def app
     Skellington
   end
 
-  config.before(:each) { DataMapper.auto_migrate! }
+  config.before(:each) {}
 
   config.include Rack::Test::Methods
 end
