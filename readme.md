@@ -19,11 +19,9 @@ frameworks, it's a tempeh burrito
 Using Ruby 2.1.2 and PostgreSQL 9.3
 
 ```
-dbcreate skellington
-
 bundle install
 
-DATABASE_URL=postgres://$USER@127.0.0.1/skellington
+createdb skellington_development
 
 bundle exec rake db:migrate
 bundle exec rackup
