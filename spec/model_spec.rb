@@ -1,34 +1,29 @@
 require File.join(File.dirname(__FILE__), 'spec_helper')
 
 describe User do
-
-  let(:user) {
-    User.create(
-      email:    'bones@skellingtons.com',
-      password: 'yogs'
-  )}
+  let(:user) { User.create(email: 'bones@skellingtons.com', password: 'yogs')}
 
   it 'can be created' do
-    user.should_not be_nil
+    expect(user).to_not be_nil
   end
 
   it 'has an email' do
-    user.email.should_not be_nil
+    expect(user.email).to_not be_nil
   end
 
   it 'has an encrypted password' do
-    user.encrypted_password.should_not be_nil
+    expect(user.encrypted_password).to_not be_nil
   end
 
   it 'does not save the unencrypted password' do
-    User[user.id].password.should be_nil
+    expect(User[user.id].password).to be_nil
   end
 
   it 'can be authenticated' do
-    User.authenticate(user.email, user.password).should_not be_nil
+    expect(User.authenticate(user.email, user.password)).to_not be_nil
   end
 
   it 'cannot be authenticated with bad credentials' do
-    User.authenticate(user.email, user.password).should_not be_nil
+    expect(User.authenticate(user.email, user.password)).to eq(false)
   end
 end
