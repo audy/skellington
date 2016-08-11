@@ -1,4 +1,4 @@
-require File.join(File.dirname(__FILE__), 'spec_helper')
+require 'spec_helper'
 
 describe Skellington do
   it 'should load the index page successfully' do

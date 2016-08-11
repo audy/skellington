@@ -1,4 +1,4 @@
-require File.join(File.dirname(__FILE__), 'spec_helper')
+require 'spec_helper'
 
 describe User do
   let(:user) { User.create(email: 'bones@skellingtons.com', password: 'yogs')}
