@@ -22,8 +22,10 @@ class Skellington < Sinatra::Base
   end
 
   configure :test do
-    @db_url = 'sqlite:///:memory:'
-    @db = Sequel.sqlite
+    `createdb skellington_test`
+    Bundler.require :test
+    @db_url = "postgres://#{ENV['USER']}@127.0.0.1/skellington_test"
+    @db = Sequel.connect @db_url
     # run migrations in test config block instead of in spec_helper because we
     # need to be able to access @db_url which is not initialized yet in
     # spec_helper :\
