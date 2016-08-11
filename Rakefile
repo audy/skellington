@@ -13,6 +13,12 @@ task :spec do
 end
 
 namespace :db do
+
+  desc 'migrate the database'
+  task :migrate do
+    `bundle exec sequel postgres://localhost/skellington_development --migrate-directory db/migrate`
+  end
+
   desc 'seed the database with information'
   task :seed do
   end
